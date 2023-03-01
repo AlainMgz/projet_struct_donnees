@@ -26,6 +26,7 @@ char* sha256file(char* file) {
     return res;
 }
 
+/*
 int main(int argc, char** argv){
     //hashFile(strdup(argv[1]), strdup(argv[2]));
     //system("sha256sum main.c > file.tmp");
@@ -33,4 +34,4 @@ int main(int argc, char** argv){
     printf("hash: %s\n", hash);
     free(hash);
     return 0;
-}
+} */
