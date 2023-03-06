@@ -64,10 +64,13 @@ char* hashToPath(char* hash) {
     return res;
 }
 
-void blobFile(char* file) {
+void blobFile(char* file, int ext) {
     char* hash = sha256file(file);
     char* dir = (char*)malloc(sizeof(char)*256);
     char* path = hashToPath(hash);
+    if (ext == 1) {
+        strcat(path, ".t");
+    }
     sscanf(path, "%2s", dir);
     char buffer[256];
     snprintf(buffer, sizeof(buffer), "mkdir %s", dir);
@@ -78,6 +81,7 @@ void blobFile(char* file) {
     free(hash);
 }
 
+/*
 int main() {
     List* l = listdir("/home/leni/Documents/Etudes/L2/Struct_de_donnees/projet/projet_struct_donnees");
     char* s = ltos(l);
@@ -92,7 +96,8 @@ int main() {
     printf(hash);
     free(hash);
     printf("\n");
-    blobFile("ex2.c");
+    blobFile("ex2.c", 0);
     
     return 0;
 }
+*/

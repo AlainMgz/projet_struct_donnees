@@ -1,0 +1,8 @@
+{
+    "cSpell.ignoreWords": [
+        "ltos"
+    ],
+    "files.associations": {
+        "string.h": "c"
+    }
+}
