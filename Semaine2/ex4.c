@@ -20,7 +20,7 @@ int getChmod ( const char * path ) {
 }
 
 void setMode ( int mode , char * path ) {
-    char buff [100];
+    char buff [1024];
     sprintf ( buff , "chmod %d %s " , mode , path ) ;
     system ( buff ) ;
 }
